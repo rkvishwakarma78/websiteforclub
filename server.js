@@ -332,11 +332,15 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Start Express Server
-app.listen(PORT, () => {
-  console.log(`====================================================`);
-  console.log(`🚀 NEXORA College Tech Club Portal is Live!`);
-  console.log(`🌐 Local URL: http://localhost:${PORT}`);
-  console.log(`📚 Database Status: ${isDbConnected ? 'MongoDB' : 'Initializing/In-Memory'}`);
-  console.log(`====================================================`);
-});
+// Start Express Server (only when not running inside Vercel serverless environment)
+if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`====================================================`);
+    console.log(`🚀 NEXORA College Tech Club Portal is Live!`);
+    console.log(`🌐 Local URL: http://localhost:${PORT}`);
+    console.log(`📚 Database Status: ${isDbConnected ? 'MongoDB' : 'Initializing/In-Memory'}`);
+    console.log(`====================================================`);
+  });
+}
+
+module.exports = app;
