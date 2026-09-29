@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events & Hackathons | NEXORA - College Technology Club</title>
+  <meta name="description" content="Discover and register for upcoming NEXORA events including NEXORA HACK 2026, Web Dev Workshops, AI Bootcamps, and CodeSprint." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Ambient Glow Effects -->
+  <div class="bg-glow-orb bg-glow-orb-1"></div>
+  <div class="bg-glow-orb bg-glow-orb-2"></div>
+
+  <!-- ==========================================================================
+       NAVBAR
+       ========================================================================== -->
+  <header>
+    <nav class="navbar" id="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="brand-logo">
+          <div class="brand-icon"><i class="fas fa-bolt"></i></div>
+          <span>NEXORA</span>
+          <span class="brand-tag">CLUB</span>
+        </a>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="events.html" class="nav-link active">Events</a></li>
+          <li><a href="team.html" class="nav-link">Team</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="contact.html" class="btn btn-primary btn-sm">
+            JOIN US <i class="fas fa-arrow-right"></i>
+          </a>
+          <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==========================================================================
+       PAGE HERO
+       ========================================================================== -->
+  <section class="section-tight" style="padding-top: 140px;">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge"><i class="fas fa-calendar-alt"></i> Official Schedule</div>
+        <h1 class="section-title">TECHNICAL <span class="gradient-text">EVENTS & HACKS</span></h1>
+        <p class="section-desc">
+          Level up your engineering skills with real-time workshops, competitive sprints, and national hackathons. All events are dynamically loaded from our backend database.
+        </p>
+      </div>
+
+      <!-- Events Filter Bar -->
+      <div class="events-filter-bar reveal">
+        <div class="filter-tags">
+          <button class="filter-btn active" data-filter="all">All Events</button>
+          <button class="filter-btn" data-filter="hackathon">Hackathons</button>
+          <button class="filter-btn" data-filter="workshop">Workshops</button>
+          <button class="filter-btn" data-filter="bootcamp">Bootcamps</button>
+          <button class="filter-btn" data-filter="coding">Coding</button>
+          <button class="filter-btn" data-filter="tech talk">Tech Talks</button>
+        </div>
+
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="event-search" placeholder="Search by title, topic, or venue..." />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       EVENTS CATALOG (DYNAMIC FROM REST API)
+       ========================================================================== -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="events-grid" id="events-container">
+        <!-- Rendered dynamically by script.js via GET /api/events -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       EVENT PARTICIPATION PERKS
+       ========================================================================== -->
+  <section class="section" style="background: rgba(13, 16, 26, 0.5); border-top: var(--border-glass);">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge"><i class="fas fa-gift"></i> Student Benefits</div>
+        <h2 class="section-title">WHY PARTICIPATE IN <span class="gradient-text">NEXORA EVENTS</span>?</h2>
+        <p class="section-desc">Every event is designed to give you tangible career outcomes and engineering experience.</p>
+      </div>
+
+      <div class="activities-grid">
+        <div class="activity-card reveal">
+          <div class="activity-icon-wrap"><i class="fas fa-certificate"></i></div>
+          <h3 class="activity-title">Verified Certificates</h3>
+          <p class="activity-desc">Receive verifiable digital credentials and accomplishment certificates recognized by partner tech firms.</p>
+        </div>
+
+        <div class="activity-card reveal">
+          <div class="activity-icon-wrap"><i class="fas fa-handshake"></i></div>
+          <h3 class="activity-title">Industry Mentorship</h3>
+          <p class="activity-desc">Direct interaction with senior software engineers, founders, and research mentors during hackathon sprints.</p>
+        </div>
+
+        <div class="activity-card reveal">
+          <div class="activity-icon-wrap"><i class="fas fa-trophy"></i></div>
+          <h3 class="activity-title">Cash Prizes & Swag</h3>
+          <p class="activity-desc">Win exciting cash rewards, tech merchandise, cloud credits, and hardware starter kits.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CTA BANNER
+       ========================================================================== -->
+  <section class="section-tight">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <h2 class="cta-title">Want to Propose a Workshop or Tech Talk?</h2>
+        <p class="cta-desc">If you have technical expertise you want to share with the college community, we'd love to host your session.</p>
+        <a href="contact.html" class="btn btn-primary"><i class="fas fa-microphone"></i> Propose a Session</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-icon"><i class="fas fa-bolt"></i></div>
+            <span>NEXORA</span>
+          </a>
+          <p class="footer-tagline">
+            "Create. Innovate. Inspire."<br />
+            Empowering students to engineer future technology through hands-on learning.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About</a></li>
+            <li><a href="events.html" class="footer-link">Events</a></li>
+            <li><a href="team.html" class="footer-link">Team</a></li>
+            <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Follow Us</h4>
+          <ul class="footer-links">
+            <li><a href="https://github.com" target="_blank" class="footer-link">GitHub</a></li>
+            <li><a href="https://linkedin.com" target="_blank" class="footer-link">LinkedIn</a></li>
+            <li><a href="https://instagram.com" target="_blank" class="footer-link">Instagram</a></li>
+            <li><a href="https://discord.com" target="_blank" class="footer-link">Discord</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Venue</h4>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 8px;">Main Auditorium / CS Lab 402</p>
+          <p style="font-size: 0.9rem; color: var(--text-secondary);">Email: hello@nexora.club</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 NEXORA. All Rights Reserved.</p>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Dynamic Event Portal & Registration</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL: EVENT REGISTRATION
+       ========================================================================== -->
+  <div class="modal-overlay" id="registration-modal">
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close Modal"><i class="fas fa-times"></i></button>
+      <div class="modal-header">
+        <h3 class="modal-title">Event Registration</h3>
+        <p style="color: var(--text-secondary); font-size: 0.92rem;">Reserve your seat for this NEXORA technical session.</p>
+      </div>
+
+      <form id="event-registration-form">
+        <div class="form-group">
+          <label for="reg-event" class="form-label">Event Name</label>
+          <input type="text" id="reg-event" class="form-control" placeholder="Selected Event Name" required readonly />
+        </div>
+
+        <div class="form-group">
+          <label for="reg-name" class="form-label">Full Name</label>
+          <input type="text" id="reg-name" class="form-control" placeholder="e.g. Siddharth Rao" required />
+        </div>
+
+        <div class="form-group">
+          <label for="reg-email" class="form-label">College Email</label>
+          <input type="email" id="reg-email" class="form-control" placeholder="e.g. siddharth@college.edu" required />
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div class="form-group">
+            <label for="reg-year" class="form-label">Year of Study</label>
+            <select id="reg-year" class="form-control">
+              <option value="1st Year">1st Year</option>
+              <option value="2nd Year" selected>2nd Year</option>
+              <option value="3rd Year">3rd Year</option>
+              <option value="4th Year">4th Year</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="reg-dept" class="form-label">Department</label>
+            <select id="reg-dept" class="form-control">
+              <option value="CSE" selected>CSE</option>
+              <option value="IT">IT</option>
+              <option value="ECE">ECE</option>
+              <option value="AI & DS">AI & DS</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" style="margin-top: 10px;">
+          <i class="fas fa-check-circle"></i> Confirm Registration
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Scroll back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

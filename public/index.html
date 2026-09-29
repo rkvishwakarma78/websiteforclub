@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEXORA | College Technology Club - CREATE. INNOVATE. INSPIRE.</title>
+  <meta name="description" content="NEXORA is a premier college technology club where students learn coding, web development, AI, cybersecurity, design, and participate in hackathons." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Ambient Glow Effects -->
+  <div class="bg-glow-orb bg-glow-orb-1"></div>
+  <div class="bg-glow-orb bg-glow-orb-2"></div>
+  <div class="bg-glow-orb bg-glow-orb-3"></div>
+
+  <!-- ==========================================================================
+       NAVBAR
+       ========================================================================== -->
+  <header>
+    <nav class="navbar" id="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="brand-logo" id="brand-logo">
+          <div class="brand-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <span>NEXORA</span>
+          <span class="brand-tag">CLUB</span>
+        </a>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link active" id="nav-home">Home</a></li>
+          <li><a href="about.html" class="nav-link" id="nav-about">About</a></li>
+          <li><a href="events.html" class="nav-link" id="nav-events">Events</a></li>
+          <li><a href="team.html" class="nav-link" id="nav-team">Team</a></li>
+          <li><a href="gallery.html" class="nav-link" id="nav-gallery">Gallery</a></li>
+          <li><a href="contact.html" class="nav-link" id="nav-contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="contact.html" class="btn btn-primary btn-sm" id="nav-join-btn">
+            JOIN US <i class="fas fa-arrow-right"></i>
+          </a>
+          <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <section class="hero-section" id="hero">
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Floating Background Glass Shapes -->
+    <div class="floating-shape shape-1"></div>
+    <div class="floating-shape shape-2"></div>
+    <div class="floating-shape shape-3"></div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span class="pulse-dot"></span>
+          <span>CREATE. INNOVATE. INSPIRE. &bull; 2026 EDITION</span>
+        </div>
+
+        <h1 class="hero-title">
+          BUILD. CREATE. <br />
+          <span class="hero-glow">INNOVATE.</span>
+        </h1>
+
+        <p class="hero-description">
+          Join a community of students passionate about technology, creativity and innovation. Explore modern software engineering, artificial intelligence, cybersecurity, and national hackathons.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="events.html" class="btn btn-primary" id="hero-explore-btn">
+            <i class="fas fa-calendar-alt"></i> EXPLORE EVENTS
+          </a>
+          <button class="btn btn-secondary" id="hero-join-btn" onclick="openRegistrationModal('General Club Membership 2026')">
+            <i class="fas fa-rocket"></i> JOIN NEXORA
+          </button>
+        </div>
+
+        <div class="hero-ribbon">
+          <div class="tech-pill"><i class="fab fa-react"></i> Web Development</div>
+          <div class="tech-pill"><i class="fas fa-brain"></i> AI & Machine Learning</div>
+          <div class="tech-pill"><i class="fas fa-shield-alt"></i> Cybersecurity</div>
+          <div class="tech-pill"><i class="fas fa-code"></i> Competitive Coding</div>
+          <div class="tech-pill"><i class="fas fa-palette"></i> UI/UX Design</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ABOUT & STATS SECTION
+       ========================================================================== -->
+  <section class="section" id="about-summary">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge"><i class="fas fa-info-circle"></i> Who We Are</div>
+        <h2 class="section-title">ABOUT <span class="gradient-text">NEXORA</span></h2>
+        <p class="section-desc">
+          NEXORA is a student-driven collegiate technical powerhouse empowering future engineers with practical skills, industry mentorship, collaborative open-source projects, and high-impact competitions.
+        </p>
+      </div>
+
+      <!-- 4 Animated Statistics -->
+      <div class="stats-grid">
+        <div class="stat-card reveal">
+          <div class="stat-icon"><i class="fas fa-user-astronaut"></i></div>
+          <div class="stat-number" data-target="500" data-suffix="+">0+</div>
+          <div class="stat-label">Members</div>
+        </div>
+
+        <div class="stat-card reveal">
+          <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+          <div class="stat-number" data-target="30" data-suffix="+">0+</div>
+          <div class="stat-label">Events</div>
+        </div>
+
+        <div class="stat-card reveal">
+          <div class="stat-icon"><i class="fas fa-laptop-code"></i></div>
+          <div class="stat-number" data-target="20" data-suffix="+">0+</div>
+          <div class="stat-label">Projects</div>
+        </div>
+
+        <div class="stat-card reveal">
+          <div class="stat-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+          <div class="stat-number" data-target="10" data-suffix="+">0+</div>
+          <div class="stat-label">Workshops</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ACTIVITIES SECTION (6 Core Wings)
+       ========================================================================== -->
+  <section class="section" id="activities">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge"><i class="fas fa-cubes"></i> Domains & Tracks</div>
+        <h2 class="section-title">CLUB <span class="gradient-text">ACTIVITIES</span></h2>
+        <p class="section-desc">
+          Explore specialized technological domains led by student experts and industry advisors.
+        </p>
+      </div>
+
+      <div class="activities-grid">
+        <!-- 1. Web Development -->
+        <div class="activity-card reveal">
+          <div>
+            <div class="activity-icon-wrap">
+              <i class="fas fa-globe"></i>
+            </div>
+            <h3 class="activity-title">Web Development</h3>
+            <p class="activity-desc">Learn and build modern websites with clean frontend frameworks, robust backend servers, APIs, and cloud deployments.</p>
+          </div>
+          <a href="events.html" class="activity-link">Explore Workshops <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- 2. AI & ML -->
+        <div class="activity-card reveal">
+          <div>
+            <div class="activity-icon-wrap">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3 class="activity-title">AI & ML</h3>
+            <p class="activity-desc">Explore artificial intelligence and machine learning through neural networks, computer vision, NLP, and predictive models.</p>
+          </div>
+          <a href="events.html" class="activity-link">Explore Workshops <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- 3. Cybersecurity -->
+        <div class="activity-card reveal">
+          <div>
+            <div class="activity-icon-wrap">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3 class="activity-title">Cybersecurity</h3>
+            <p class="activity-desc">Learn about online security and ethical hacking, CTF challenges, cryptography, network defense, and vulnerability auditing.</p>
+          </div>
+          <a href="events.html" class="activity-link">Explore Workshops <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- 4. Hackathons -->
+        <div class="activity-card reveal">
+          <div>
+            <div class="activity-icon-wrap">
+              <i class="fas fa-fire"></i>
+            </div>
+            <h3 class="activity-title">Hackathons</h3>
+            <p class="activity-desc">Build innovative solutions with your team in 24-48 hour intensive hack marathons with industry judges and cash grants.</p>
+          </div>
+          <a href="events.html" class="activity-link">Explore Hackathons <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- 5. UI/UX -->
+        <div class="activity-card reveal">
+          <div>
+            <div class="activity-icon-wrap">
+              <i class="fas fa-palette"></i>
+            </div>
+            <h3 class="activity-title">UI/UX Design</h3>
+            <p class="activity-desc">Learn modern interface and user experience design, wireframing, design systems, glassmorphism, and user-centric flows.</p>
+          </div>
+          <a href="events.html" class="activity-link">Explore Masterclasses <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- 6. Coding -->
+        <div class="activity-card reveal">
+          <div>
+            <div class="activity-icon-wrap">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3 class="activity-title">Coding & DSA</h3>
+            <p class="activity-desc">Improve programming and problem-solving skills with competitive coding sessions, data structures, and algorithmic drills.</p>
+          </div>
+          <a href="events.html" class="activity-link">Join Contests <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       DYNAMIC EVENTS SECTION
+       ========================================================================== -->
+  <section class="section" id="events">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge"><i class="fas fa-calendar-check"></i> What's Happening</div>
+        <h2 class="section-title">UPCOMING <span class="gradient-text">EVENTS</span></h2>
+        <p class="section-desc">
+          Live technical events, hackathons, and bootcamps fetched in real-time from our backend API.
+        </p>
+      </div>
+
+      <!-- Events Filter Bar -->
+      <div class="events-filter-bar reveal">
+        <div class="filter-tags">
+          <button class="filter-btn active" data-filter="all">All Events</button>
+          <button class="filter-btn" data-filter="hackathon">Hackathons</button>
+          <button class="filter-btn" data-filter="workshop">Workshops</button>
+          <button class="filter-btn" data-filter="coding">Coding</button>
+          <button class="filter-btn" data-filter="bootcamp">Bootcamps</button>
+        </div>
+
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="event-search" placeholder="Search events by title or keyword..." />
+        </div>
+      </div>
+
+      <!-- Events Grid Container (Dynamically injected via fetch('/api/events')) -->
+      <div class="events-grid" id="events-container">
+        <!-- Event cards will be rendered dynamically by script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       LEADERSHIP PREVIEW SECTION
+       ========================================================================== -->
+  <section class="section" id="team-preview">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge"><i class="fas fa-users-cog"></i> Core Team</div>
+        <h2 class="section-title">MEET THE <span class="gradient-text">LEADERSHIP</span></h2>
+        <p class="section-desc">
+          Passionate tech enthusiasts guiding NEXORA to new heights of innovation.
+        </p>
+      </div>
+
+      <div class="team-grid">
+        <!-- President -->
+        <div class="team-card reveal">
+          <div class="team-avatar-wrap">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Aarav Sharma" class="team-avatar" />
+          </div>
+          <h3 class="team-name">Aarav Sharma</h3>
+          <div class="team-role">President</div>
+          <p class="team-bio">Full-stack engineer, hackathon winner, and community builder leading club vision and strategic partnerships.</p>
+          <div class="team-socials">
+            <a href="https://linkedin.com" target="_blank" class="team-social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com" target="_blank" class="team-social-link"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com" target="_blank" class="team-social-link"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <!-- Vice President -->
+        <div class="team-card reveal">
+          <div class="team-avatar-wrap">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Diya Patel" class="team-avatar" />
+          </div>
+          <h3 class="team-name">Diya Patel</h3>
+          <div class="team-role">Vice President</div>
+          <p class="team-bio">AI researcher, competitive coder, and student mentor coordinating operations and technical programs.</p>
+          <div class="team-socials">
+            <a href="https://linkedin.com" target="_blank" class="team-social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com" target="_blank" class="team-social-link"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com" target="_blank" class="team-social-link"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <!-- Technical Lead -->
+        <div class="team-card reveal">
+          <div class="team-avatar-wrap">
+            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=400&q=80" alt="Rohan Verma" class="team-avatar" />
+          </div>
+          <h3 class="team-name">Rohan Verma</h3>
+          <div class="team-role">Technical Lead</div>
+          <p class="team-bio">Cloud architect and backend specialist overseeing coding bootcamps and student project incubation.</p>
+          <div class="team-socials">
+            <a href="https://linkedin.com" target="_blank" class="team-social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com" target="_blank" class="team-social-link"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com" target="_blank" class="team-social-link"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="team.html" class="btn btn-secondary">View Full Team Directory <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GALLERY PREVIEW SECTION
+       ========================================================================== -->
+  <section class="section" id="gallery-preview">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge"><i class="fas fa-camera"></i> Moments in Tech</div>
+        <h2 class="section-title">CLUB <span class="gradient-text">GALLERY</span></h2>
+        <p class="section-desc">
+          Glimpses into our hackathons, coding nights, robotics workshops, and celebrations.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="NEXORA Hackathon 2025" />
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Hackathon</span>
+            <div class="gallery-title">NEXORA Hackathon 24H Sprint</div>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Team Brainstorming Session" />
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Team Activity</span>
+            <div class="gallery-title">Design Sprint & Prototype Review</div>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=800&q=80" alt="Web Dev Workshop" />
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Workshop</span>
+            <div class="gallery-title">Hands-on Full-Stack Lab</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="gallery.html" class="btn btn-secondary">Explore Full Photo Gallery <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CALL TO ACTION BANNER
+       ========================================================================== -->
+  <section class="section-tight">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <h2 class="cta-title">Ready to Shape the Future with <span class="gradient-text">NEXORA</span>?</h2>
+        <p class="cta-desc">
+          Whether you are writing your first line of Python or building complex neural nets, there is a place for you in our tech family.
+        </p>
+        <button class="btn btn-primary" onclick="openRegistrationModal('General Club Membership 2026')">
+          <i class="fas fa-user-plus"></i> Join NEXORA Today
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CONTACT PREVIEW SECTION
+       ========================================================================== -->
+  <section class="section" id="contact-summary">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge"><i class="fas fa-envelope-open-text"></i> Get In Touch</div>
+        <h2 class="section-title">CONNECT WITH <span class="gradient-text">US</span></h2>
+        <p class="section-desc">
+          Have a question about upcoming events, partnerships, or joining the club? Send us a message!
+        </p>
+      </div>
+
+      <div class="contact-wrapper">
+        <div class="contact-info-card reveal">
+          <div>
+            <h3 style="font-size: 1.6rem; color: var(--text-white); margin-bottom: 12px;">Contact Information</h3>
+            <p style="color: var(--text-secondary);">Reach out directly or connect with us on our official social handles.</p>
+
+            <div class="contact-detail-list">
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                <div class="contact-item-text">
+                  <h4>Email</h4>
+                  <a href="mailto:hello@nexora.club">hello@nexora.club</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+                <div class="contact-item-text">
+                  <h4>Instagram</h4>
+                  <a href="https://instagram.com" target="_blank">@nexora.club</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+                <div class="contact-item-text">
+                  <h4>LinkedIn</h4>
+                  <a href="https://linkedin.com" target="_blank">NEXORA Club</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.08);">
+            <p style="font-size: 0.88rem; color: var(--text-muted);"><i class="fas fa-map-marker-alt" style="color: var(--primary-cyan);"></i> Tech Innovation Lab 402, Computer Science Block, Main Campus</p>
+          </div>
+        </div>
+
+        <div class="form-card reveal">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="contact-name" class="form-label">Your Name</label>
+              <input type="text" id="contact-name" class="form-control" placeholder="e.g. Rahul Sharma" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email" class="form-label">Email Address</label>
+              <input type="email" id="contact-email" class="form-control" placeholder="e.g. rahul@college.edu" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-subject" class="form-label">Subject</label>
+              <input type="text" id="contact-subject" class="form-control" placeholder="e.g. Event Inquiry / Club Membership" />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Message</label>
+              <textarea id="contact-message" class="form-control" rows="4" placeholder="Write your message here..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fas fa-paper-plane"></i> SEND MESSAGE
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-icon"><i class="fas fa-bolt"></i></div>
+            <span>NEXORA</span>
+          </a>
+          <p class="footer-tagline">
+            "Create. Innovate. Inspire."<br />
+            Empowering students to engineer future technology through hands-on learning and collaborative hackathons.
+          </p>
+          <div class="footer-socials">
+            <a href="https://github.com" target="_blank" class="footer-social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="footer-social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://instagram.com" target="_blank" class="footer-social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://discord.com" target="_blank" class="footer-social-link" aria-label="Discord"><i class="fab fa-discord"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Club</a></li>
+            <li><a href="events.html" class="footer-link">Tech Events</a></li>
+            <li><a href="team.html" class="footer-link">Our Team</a></li>
+            <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Core Tracks</h4>
+          <ul class="footer-links">
+            <li><a href="events.html" class="footer-link">Web Development</a></li>
+            <li><a href="events.html" class="footer-link">AI & Machine Learning</a></li>
+            <li><a href="events.html" class="footer-link">Cybersecurity</a></li>
+            <li><a href="events.html" class="footer-link">Competitive Coding</a></li>
+            <li><a href="events.html" class="footer-link">UI/UX Design</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact & Lab</h4>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 12px;">
+            Email: <a href="mailto:hello@nexora.club" style="color: var(--primary-cyan);">hello@nexora.club</a>
+          </p>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 12px;">
+            Instagram: @nexora.club
+          </p>
+          <p style="font-size: 0.9rem; color: var(--text-secondary);">
+            LinkedIn: NEXORA Club
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 NEXORA. All Rights Reserved.</p>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">
+          Built with <span style="color: var(--primary-cyan);">&hearts;</span> by NEXORA Tech Council
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL: EVENT REGISTRATION
+       ========================================================================== -->
+  <div class="modal-overlay" id="registration-modal">
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close Modal">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="modal-header">
+        <h3 class="modal-title">Event Registration</h3>
+        <p style="color: var(--text-secondary); font-size: 0.92rem;">Register now to reserve your seat for the event.</p>
+      </div>
+
+      <form id="event-registration-form">
+        <div class="form-group">
+          <label for="reg-event" class="form-label">Event</label>
+          <input type="text" id="reg-event" class="form-control" placeholder="Selected Event Name" required readonly />
+        </div>
+
+        <div class="form-group">
+          <label for="reg-name" class="form-label">Full Name</label>
+          <input type="text" id="reg-name" class="form-control" placeholder="e.g. Priya Sharma" required />
+        </div>
+
+        <div class="form-group">
+          <label for="reg-email" class="form-label">College Email</label>
+          <input type="email" id="reg-email" class="form-control" placeholder="e.g. priya@college.edu" required />
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div class="form-group">
+            <label for="reg-year" class="form-label">Year of Study</label>
+            <select id="reg-year" class="form-control">
+              <option value="1st Year">1st Year</option>
+              <option value="2nd Year" selected>2nd Year</option>
+              <option value="3rd Year">3rd Year</option>
+              <option value="4th Year">4th Year</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="reg-dept" class="form-label">Department</label>
+            <select id="reg-dept" class="form-control">
+              <option value="CSE" selected>CSE</option>
+              <option value="IT">IT</option>
+              <option value="ECE">ECE</option>
+              <option value="AI & DS">AI & DS</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" style="margin-top: 10px;">
+          <i class="fas fa-check-circle"></i> Confirm Registration
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL: GALLERY LIGHTBOX
+       ========================================================================== -->
+  <div class="lightbox-modal" id="gallery-lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close-btn" aria-label="Close Lightbox">
+        <i class="fas fa-times"></i>
+      </button>
+      <img src="" alt="Gallery Image" class="lightbox-image" id="lightbox-img" />
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Scroll back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>
